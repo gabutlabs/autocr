@@ -1,0 +1,17 @@
+Refactoring adalah proses mengubah struktur kode tanpa mengubah perilakunya. Tips refactoring:
+
+1. Ekstrak fungsi - pecah fungsi besar jadi fungsi kecil
+2. Ganti magic number dengan konstanta
+3. Gunakan meaningful variable names
+4. Hindari nested conditionals yang dalam
+5. Terapkan Single Responsibility Principle
+6. Gunakan early returns untuk mengurangi nesting
+7. Hilangkan duplicate code dengan abstraction
+8. Gunakan guard clauses untuk pengecekan awal
+
+Teknik umum:
+- Extract Method
+- Inline Method
+- Rename Variable
+- Replace Temp with Query
+- Introduce Parameter Object

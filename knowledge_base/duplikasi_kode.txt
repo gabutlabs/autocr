@@ -1,0 +1,15 @@
+Duplikasi kode adalah situasi di mana blok kode yang sama atau mirip muncul berulang kali dalam program. Ini berbahaya karena:
+
+1. Sulit dikelola - jika ada bug, harus diperbaiki di banyak tempat
+2. Meningkatkan ukuran kode secara tidak perlu
+3. Menyulitkan pengembangan fitur baru
+
+Tanda-tanda duplikasi kode:
+- Blok kode yang persis sama
+- Kode dengan perbedaan kecil (nama variabel, nilai literal)
+- Fungsi dengan logika yang hampir identik
+
+Cara mengatasi:
+- Ekstrak ke fungsi bersama
+- Gunakan inheritance/polimorfisme
+- Terapkan design patterns

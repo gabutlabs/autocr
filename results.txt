@@ -1,0 +1,366 @@
+SSIM Scores:
+Comparing code snippets...
+------
+SSIM between /test_cases/original.py and /test_cases/identical.py: 1.0
+------
+SSIM between /test_cases/original.py and /test_cases/whitespace_changed.py: 0.9750543059234134
+------
+SSIM between /test_cases/original.py and /test_cases/variable_renamed.py: 0.9744441487151959
+------
+SSIM between /test_cases/original.py and /test_cases/structure_changed.py: 0.9374960453152309
+Comparing code snippets...
+------
+SSIM between /test_cases/original.py and /test_cases/identical.py: 1.0
+------
+SSIM between /test_cases/original.py and /test_cases/whitespace_changed.py: 0.9750543059234134
+------
+SSIM between /test_cases/original.py and /test_cases/variable_renamed.py: 0.9744441487151959
+------
+SSIM between /test_cases/original.py and /test_cases/structure_changed.py: 0.9374960453152309
+Comparing code snippets...
+------
+SSIM between /test_cases/original.py and /test_cases/identical.py: 1.0
+------
+SSIM between /test_cases/original.py and /test_cases/whitespace_changed.py: 0.9750543059234134
+------
+SSIM between /test_cases/original.py and /test_cases/variable_renamed.py: 0.9744441487151959
+------
+SSIM between /test_cases/original.py and /test_cases/structure_changed.py: 0.9374960453152309
+Comparing code snippets...
+------
+Halo programmer! Saya akan membantu Anda melakukan code review untuk Pull Request ini, mirip dengan yang Anda lihat di GitHub.
+
+---
+
+**Code Review untuk Pull Request**
+
+**Original Commit Code (Kode 1):**
+```python
+def calculate_sum(a, b):
+    result = a + b
+    return result
+
+def main():
+    x = 5
+    y = 10
+    total = calculate_sum(x, y)
+    print(f"Sum: {total}")
+
+if __name__ == "__main__":
+    main()
+```
+
+**Proposed PR Code (Kode 2):**
+```python
+def calculate_sum(a, b):
+    result = a + b
+    return result
+
+def main():
+    x = 5
+    y = 10
+    total = calculate_sum(x, y)
+    print(f"Sum: {total}")
+
+if __name__ == "__main__":
+    main()
+```
+
+**Similarity Score:** 1.0
+
+**Analisis:**
+Similarity Score 1.0 menunjukkan bahwa tidak ada perubahan yang terdeteksi antara kode pada *original commit* (Kode 1) dan kode yang diusulkan dalam Pull Request (Kode 2). Ini berarti kedua potongan kode tersebut identik. Dalam konteks Pull Request, biasanya diharapkan ada perubahan yang diperkenalkan. Jika Anda berniat untuk membuat perubahan, pastikan Anda telah melakukan perubahan tersebut sebelum membuat PR. Jika PR ini dimaksudkan untuk tujuan lain (misalnya, memicu CI/CD tanpa perubahan kode), harap berikan konteks tambahan.
+
+**Pengetahuan Relevan:**
+
+Meskipun tidak ada perubahan dalam PR ini, kami akan menganalisis kualitas kode yang ada berdasarkan prinsip-prinsip *Clean Code*.
+
+**Knowledge Base yang Relevan:** `clean_code_principle.txt`
+
+**Ringkasan Pengetahuan Relevan dari `clean_code_principle.txt`:**
+
+**Clean Code Principle**
+Clean Code adalah kode yang mudah dibaca, dipahami, dan diubah oleh orang lain (termasuk diri sendiri di masa depan). Kode yang bersih meningkatkan produktivitas, mengurangi bug, dan mempermudah pemeliharaan perangkat lunak.
+
+Beberapa prinsip utama Clean Code yang relevan dengan kode ini meliputi:
+
+1.  **Penamaan yang Bermakna (Meaningful Names):**
+    *   Prinsip ini menekankan penggunaan nama variabel, fungsi, dan kelas yang jelas, deskriptif, dan mencerminkan tujuan atau fungsinya. Hindari singkatan yang membingungkan atau nama generik yang tidak informatif.
+    *   **Penerapan pada Kode:** Kode Anda menggunakan nama yang sangat bermakna seperti `calculate_sum`, `a`, `b`, `result`, `x`, `y`, dan `total`. Ini membuat tujuan setiap bagian kode sangat mudah dipahami.
+
+2.  **Fungsi Kecil (Small Functions):**
+    *   Fungsi harus memiliki satu tanggung jawab (Single Responsibility Principle) dan harus sesingkat mungkin. Idealnya, setiap fungsi harus melakukan satu hal dan melakukannya dengan baik. Fungsi kecil lebih mudah dipuji, diuji, dan dipelihara.
+    *   **Penerapan pada Kode:** Fungsi `calculate_sum` sangat kecil dan hanya memiliki satu tanggung jawab, yaitu menghitung jumlah dua angka. Fungsi `main` juga kecil dan bertanggung jawab untuk menjalankan alur utama program. Ini adalah contoh yang baik dari fungsi kecil yang fokus pada satu tugas.
+
+3.  **Hindari Duplikasi (Avoid Duplication):**
+    *   Prinsip ini, juga dikenal sebagai "Don't Repeat Yourself (DRY)", menyarankan untuk menghindari blok kode yang sama atau sangat mirip muncul lebih dari satu kali. Jika ada duplikasi, pertimbangkan untuk mengekstraknya menjadi fungsi atau kelas yang dapat digunakan kembali.
+    *   **Penerapan pada Kode:** Dalam potongan kode ini, tidak ada duplikasi internal yang terlihat.
+
+**Contoh Kode Relevan dari Knowledge Base:**
+Tidak ada contoh kode spesifik yang disediakan dalam knowledge base, namun kode yang Anda berikan (`calculate_sum`, `main`) itu sendiri merupakan contoh yang baik dari penerapan prinsip Penamaan yang Bermakna dan Fungsi Kecil dalam Clean Code.
+
+**Saran Tambahan (Meskipun PR tidak ada perubahan):**
+Meskipun kode ini sudah sangat bersih, ada sedikit penyederhanaan yang bisa dilakukan pada fungsi `calculate_sum` untuk membuatnya lebih ringkas, sesuai dengan semangat fungsi kecil dan sederhana:
+
+```python
+# Versi saat ini:
+def calculate_sum(a, b):
+    result = a + b
+    return result
+
+# Versi yang disederhanakan:
+def calculate_sum(a, b):
+    return a + b
+```
+Pengubahan ini menghilangkan variabel `result` perantara, yang dalam kasus sederhana ini tidak terlalu menambah kejelasan, sehingga membuat fungsi sedikit lebih padat dan langsung. Ini adalah jenis "micro-refactoring" yang sering dilakukan untuk meningkatkan keringkasan kode.
+
+---
+Semoga review ini bermanfaat! Jika ada pertanyaan lain atau jika Anda ingin mereview kode dengan perubahan, jangan ragu untuk memberitahu saya.SSIM between /test_cases/original.py and /test_cases/identical.py: 1.0
+------
+Halo programmer!
+
+Sebagai agen code review Anda, saya telah menganalisis permintaan pull request Anda.
+
+### Perbandingan Kode
+
+Saya telah membandingkan kode dari commit asal (origin) dengan kode yang Anda ajukan dalam PR ini.
+
+**Kode Asal (Origin Commit):**
+```python
+def calculate_sum(a, b):
+    result = a + b
+    return result
+
+def main():
+    x = 5
+    y = 10
+    total = calculate_sum(x, y)
+    print(f"Sum: {total}")
+
+if __name__ == "__main__":
+    main()
+```
+
+**Kode Perubahan (PR Commit):**
+```python
+def calculate_sum(a,b):
+    result=a+b
+    return result
+
+def main():
+    x=5
+    y=10
+    total=calculate_sum(x,y)
+    print(f"Sum: {total}")
+
+if __name__=="__main__":
+    main()
+```
+
+**Similarity Score:** 0.9750543059234134
+
+### Analisis dan Pengetahuan Relevan
+
+Perubahan yang terdeteksi antara kedua versi kode ini sangat minim, hanya melibatkan perbedaan spasi dan format penulisan di sekitar operator (`=`, `+`) dan setelah koma. Fungsionalitas inti kode tetap sama persis.
+
+Berdasarkan sifat perubahan ini, knowledge base yang paling relevan adalah **`clean_code_principle.txt`**.
+
+#### Pengetahuan dari `clean_code_principle.txt`
+
+Berikut adalah ringkasan pengetahuan yang relevan dari `clean_code_principle.txt`:
+
+*   **Readability (Keterbacaan):** Kode harus mudah dibaca dan dipahami oleh manusia, bukan hanya oleh komputer. Penggunaan spasi yang tepat di sekitar operator, setelah koma, dan dalam deklarasi fungsi sangat berkontribusi pada keterbacaan kode. Kode yang mudah dibaca mengurangi waktu dan usaha yang dibutuhkan untuk memahami, memelihara, dan men-debug-nya.
+
+*   **Consistency (Konsistensi):** Penting untuk menjaga konsistensi dalam gaya penulisan kode di seluruh proyek atau tim. Ini termasuk gaya penamaan, indentasi, dan penggunaan spasi. Kode yang konsisten lebih mudah dipelajari dan dinavigasi oleh pengembang lain.
+
+*   **Formatting (Pemformatan):** Mengikuti pedoman gaya bahasa pemrograman (misalnya, [PEP 8 untuk Python](https://www.python.org/dev/peps/pep-0008/)) sangat direkomendasikan untuk mencapai keterbacaan dan konsistensi. Pedoman ini seringkali secara eksplisit membahas penggunaan spasi untuk meningkatkan kejelasan.
+
+#### Rekomendasi
+
+Meskipun fungsionalitas kode tidak berubah, perubahan pada spasi dalam PR ini cenderung mengurangi keterbacaan dibandingkan dengan kode aslinya. Kode asal lebih sesuai dengan konvensi gaya Python (PEP 8) yang direkomendasikan, seperti:
+
+*   **Spasi di sekitar operator:** `result = a + b` (lebih baik dari `result=a+b`)
+*   **Spasi setelah koma:** `def calculate_sum(a, b):` (lebih baik dari `def calculate_sum(a,b):`)
+
+**Contoh Kode yang Relevan (Berdasarkan `clean_code_principle.txt` dan PEP 8):**
+
+**Kurang Baik (Kurang readable, kurang konsisten dengan PEP 8):**
+```python
+x=5
+y=10
+total=x+y # Spasi kurang di sekitar operator
+```
+
+**Lebih Baik (Lebih readable, konsisten dengan PEP 8):**
+```python
+x = 5
+y = 10
+total = x + y # Spasi yang tepat di sekitar operator
+```
+
+Disarankan untuk mempertahankan format seperti pada commit asal untuk menjaga keterbacaan dan konsistensi kode sesuai dengan praktik terbaik Python (PEP 8), yang sejalan dengan prinsip-prinsip Clean Code.SSIM between /test_cases/original.py and /test_cases/whitespace_changed.py: 0.9750543059234134
+------
+Halo, saya adalah agent yang membantu programmer dengan *code review* Anda. Mari kita tinjau *Pull Request* ini.
+
+**Ringkasan Perubahan:**
+Perubahan dalam *Pull Request* ini melibatkan penggantian nama variabel dan parameter agar lebih deskriptif dan mudah dipahami. Misalnya, `a` dan `b` menjadi `first_number` dan `second_number`, `result` menjadi `sum_result`, serta `x`, `y`, `total` menjadi `num1`, `num2`, `total_result`.
+
+**Similarity Score:** 0.9744441487151959
+Skor kesamaan yang sangat tinggi ini menunjukkan bahwa perubahan yang dilakukan relatif kecil dalam hal struktur kode, tetapi signifikan dalam hal kejelasan penamaan.
+
+---
+
+**Analisis Berdasarkan Knowledge Base:**
+
+Berdasarkan perubahan yang dilakukan, *knowledge base* yang paling relevan adalah **`clean_code_principle.txt`** dan **`refactoring_tips.txt`** karena perubahan ini berfokus pada peningkatan keterbacaan dan kejelasan melalui penamaan yang lebih baik, yang merupakan prinsip inti dari *clean code* dan salah satu tips refactoring yang paling umum.
+
+### Pengetahuan Relevan dari `clean_code_principle.txt`:
+
+1.  **Nama yang Bermakna (Meaningful Names)**
+    *   **Penjelasan**: Salah satu prinsip dasar dari kode bersih adalah menggunakan nama variabel, fungsi, kelas, dan argumen yang deskriptif dan mudah dipahami. Nama yang baik menjelaskan tujuan, fungsi, atau isi dari elemen kode tersebut. Ini membantu orang lain (termasuk diri Anda di masa depan) untuk memahami kode dengan cepat tanpa perlu melacak atau menebak maksudnya. Hindari singkatan yang ambigu atau satu huruf (kecuali untuk konteks sangat lokal seperti *loop counter* `i` atau `j`).
+
+    *   **Penerapan pada Kode Anda**: Perubahan dari `a, b` menjadi `first_number, second_number`, dan dari `result` menjadi `sum_result` adalah contoh yang sangat baik dari penerapan prinsip ini. Nama-nama baru ini secara instan mengkomunikasikan tujuan dari variabel dan parameter tersebut, meningkatkan keterbacaan kode secara keseluruhan. Perubahan pada variabel di fungsi `main` seperti `x, y` menjadi `num1, num2` dan `total` menjadi `total_result` juga mengikuti prinsip ini.
+
+    *   **Contoh Kode dari Knowledge Base (jika ada):**
+        ```python
+        # Buruk
+        def calc(a, b):
+            return a + b
+
+        # Baik (Relevan dengan perubahan Anda)
+        def calculate_sum(first_number, second_number):
+            return first_number + second_number
+        ```
+
+2.  **Kode yang Mudah Dibaca (Readable Code)**
+    *   **Penjelasan**: Kode harus mudah dibaca dan dipahami oleh siapa saja yang melihatnya, bukan hanya penulis aslinya. Keterbacaan yang baik mengurangi waktu yang dibutuhkan untuk memahami dan memelihara kode, serta meminimalkan risiko bug.
+
+    *   **Penerapan pada Kode Anda**: Dengan menggunakan nama-nama yang lebih deskriptif, Anda telah secara signifikan meningkatkan keterbacaan kode Anda. Bahkan seseorang yang belum pernah melihat kode ini sebelumnya akan dapat memahami tujuannya dengan lebih cepat.
+
+---
+
+### Kesimpulan Review:
+
+Perubahan yang Anda lakukan ini merupakan perbaikan yang sangat baik. Meskipun fungsionalitas kode tidak berubah, kualitas internal kode meningkat secara signifikan. Penamaan yang lebih deskriptif membuat kode Anda lebih mudah dibaca, dipahami, dan dipelihara di masa mendatang, sesuai dengan prinsip-prinsip *clean code*. Ini adalah contoh *refactoring* yang baik untuk meningkatkan kejelasan kode.
+
+**Saran**: Lanjutkan praktik penamaan yang baik ini di seluruh basis kode Anda. Ini akan sangat membantu dalam pengembangan dan pemeliharaan jangka panjang.SSIM between /test_cases/original.py and /test_cases/variable_renamed.py: 0.9744441487151959
+------
+Halo programmer! Sebagai agen code review Anda, saya telah menganalisis Pull Request Anda.
+
+### Perbandingan Kode
+
+**Kode Origin (sebelum perubahan):**
+```python
+def calculate_sum(a, b):
+    result = a + b
+    return result
+
+def main():
+    x = 5
+    y = 10
+    total = calculate_sum(x, y)
+    print(f"Sum: {total}")
+
+if __name__ == "__main__":
+    main()
+```
+
+**Kode yang Diusulkan (setelah perubahan):**
+```python
+def main():
+    def calc(a, b):
+        return a + b
+    
+    x = 5
+    y = 10
+    print(f"Sum: {calc(x, y)}")
+
+if __name__ == "__main__":
+    main()
+```
+
+**Similarity Score:** `0.9374960453152309`
+
+### Analisis Perubahan
+
+Terlihat bahwa Anda telah melakukan beberapa perubahan struktural pada kode:
+1.  Fungsi `calculate_sum` yang awalnya merupakan fungsi top-level telah diubah menjadi fungsi bersarang `calc` di dalam fungsi `main`.
+2.  Nama fungsi diubah dari `calculate_sum` menjadi `calc`.
+3.  Penggunaan variabel perantara (`result` di `calculate_sum` dan `total` di `main`) telah dihilangkan, sehingga nilai dikembalikan dan dicetak secara langsung.
+
+### Pengetahuan Relevan
+
+Perubahan yang Anda lakukan sangat relevan dengan praktik **Refactoring** dan prinsip-prinsip **Clean Code**.
+
+#### 1. Refactoring (Paling Relevan)
+
+*   **Ringkasan Pengetahuan:**
+    **Refactoring** adalah proses mengubah struktur internal perangkat lunak tanpa mengubah perilaku eksternalnya. Tujuannya adalah untuk meningkatkan kualitas kode, membuatnya lebih mudah dipahami, diubah, dan dipelihara, tanpa menambahkan fungsionalitas baru.
+
+*   **Relevansi dengan Kode Anda:**
+    Perubahan ini adalah contoh refactoring karena Anda memodifikasi struktur kode (memindahkan dan menyederhanakan fungsi) tanpa mengubah hasil akhir program (perhitungan dan pencetakan jumlah). Jenis refactoring spesifik yang terlihat di sini antara lain:
+    *   **Inline Method (semi-inlining atau nesting):** Meskipun bukan inlining penuh, memindahkan fungsi `calc` ke dalam `main` dapat dianggap sebagai upaya untuk menyematkan logika yang hanya relevan di satu tempat penggunaan, mengurangi kebutuhan akan fungsi top-level jika `calc` tidak dimaksudkan untuk digunakan di luar `main`.
+    *   **Replace Temp with Query:** Penghapusan variabel `result` dan `total` dan langsung mengembalikan/mencetak hasil adalah contoh yang baik dari upaya untuk mengganti variabel temporer dengan ekspresi langsung atau panggilan fungsi, membuat kode lebih ringkas.
+
+*   **Contoh Kode dari Knowledge Base:**
+    Knowledge base `refactoring.txt` tidak menyediakan contoh kode spesifik untuk "Replace Temp with Query" atau "Inline Method", namun menjelaskan definisinya. Berikut adalah contoh prinsip refactoring Extract Method yang kebalikannya, tetapi menunjukkan bagaimana refactoring bekerja untuk mengubah struktur:
+
+    ```python
+    # Sebelum (Duplikasi) - Contoh dari knowledge_base/duplikasi_kode.txt yang relevan dengan refactoring
+    def process_data_A(data):
+        # ... preprocessing A ...
+        result = data * 2 + 1
+        # ... postprocessing A ...
+        return result
+
+    def process_data_B(data):
+        # ... preprocessing B ...
+        result = data * 2 + 1 # Duplikasi di sini
+        # ... postprocessing B ...
+        return result
+
+    # Sesudah (Refactored - Menggunakan Extract Method)
+    def common_calculation(data):
+        return data * 2 + 1
+
+    def process_data_A_refactored(data):
+        # ... preprocessing A ...
+        result = common_calculation(data)
+        # ... postprocessing A ...
+        return result
+    ```
+
+#### 2. Prinsip Clean Code
+
+*   **Ringkasan Pengetahuan:**
+    **Clean Code** adalah kode yang mudah dibaca, dipahami, dan diubah oleh siapapun. Ini menekankan pada kejelasan, keringkasan, dan fokus pada satu tujuan.
+
+*   **Relevansi dengan Kode Anda:**
+    Perubahan yang Anda lakukan sejalan dengan beberapa prinsip Clean Code:
+    *   **Fungsi Kecil dan Berfokus (Small and Focused Functions):** Fungsi `calc` yang baru sangat ringkas dan hanya melakukan satu tugas (penjumlahan) dengan baik. Meskipun `calculate_sum` sebelumnya juga fokus, `calc` bahkan lebih minimalis.
+    *   **Keterbacaan dan Keringkasan:** Dengan menghilangkan variabel perantara `result` dan `total`, kode menjadi lebih ringkas dan aliran data menjadi lebih langsung dan mudah dibaca, mengurangi "noise" visual.
+
+*   **Contoh Kode dari Knowledge Base:**
+    Berikut adalah contoh dari knowledge base `clean_code_principle.txt` yang menggambarkan prinsip "Small and Focused Functions", meskipun contohnya adalah untuk memecah fungsi besar, semangatnya adalah untuk menjaga fungsi tetap fokus dan ringkas:
+
+    ```python
+    # Bad Function (Melakukan banyak hal)
+    def process_order(customer_data, item_list):
+        # Validate customer
+        # Calculate total
+        # Apply discount
+        # Generate invoice
+        # Send email
+        # Update inventory
+
+    # Good Functions (Fokus pada satu hal)
+    def validate_customer(customer_data):
+        # ...
+
+    def calculate_order_total(item_list):
+        # ...
+
+    # ... dan seterusnya, setiap fungsi melakukan satu hal.
+    ```
+
+Secara keseluruhan, Pull Request Anda menunjukkan upaya yang baik untuk merapikan dan menyederhanakan kode, yang merupakan tujuan utama dari refactoring dan penulisan clean code. Pertimbangkan dampak dari fungsi bersarang terhadap reusabilitas dan pengujian di masa mendatang.SSIM between /test_cases/original.py and /test_cases/structure_changed.py: 0.9374960453152309

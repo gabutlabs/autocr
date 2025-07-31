@@ -1,0 +1,29 @@
+Prinsip Clean Code:
+
+1. KISS (Keep It Simple, Stupid)
+   - Kode harus sesederhana mungkin
+   - Hindari kompleksitas yang tidak perlu
+
+2. DRY (Don't Repeat Yourself)
+   - Setiap pengetahuan harus punya representasi tunggal
+   - Hindari duplikasi logika
+
+3. SRP (Single Responsibility Principle)
+   - Setiap kelas/fungsi punya satu tujuan
+   - Mudah di-test dan dimodifikasi
+
+4. Naming yang jelas
+   - Nama variabel/fungsi harus menjelaskan fungsinya
+   - Hindari singkatan yang tidak umum
+
+5. Fungsi kecil
+   - Idealnya < 20 baris
+   - Satu fungsi satu tanggung jawab
+
+6. Komentar minimal
+   - Kode yang baik menjelaskan dirinya sendiri
+   - Komentar hanya untuk hal yang tidak bisa dijelaskan dengan kode
+
+7. Penanganan error yang baik
+   - Gunakan exception handling yang tepat
+   - Jangan abaikan error
