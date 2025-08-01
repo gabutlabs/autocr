@@ -30,9 +30,13 @@ if __name__ == "__main__":
                 continue
                 
             score,source1,source2 = compare_code_files(code1, code2)
-            with open(os.path.join(path,"knowledge_base/prompt.txt"),'r', encoding='utf-8') as prompt_file:
-                prompt = prompt_file.read().strip()
-                result= run_agent(f"{prompt}\n\n{source1}\n\n{source2}\n\n Similarity score: {score}")
-                f.write("------\n")
-                f.write(str(result) if result is not None else "")
+            if score is None:
+                f.write(f"Error comparing {file1} and {file2}\n")
+                continue
+            if score < 1:
+                with open(os.path.join(path,"knowledge_base/prompt.txt"),'r', encoding='utf-8') as prompt_file:
+                    prompt = prompt_file.read().strip()
+                    result= run_agent(f"{prompt}\n\n{source1}\n\n{source2}\n\n Similarity score: {score}")
+                    f.write("------\n")
+                    f.write(str(result) if result is not None else "")
             f.write(f"SSIM between {file1} and {file2}: {score}\n")

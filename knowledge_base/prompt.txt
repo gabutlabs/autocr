@@ -10,3 +10,4 @@ rules:
 8. nanti akan ada 2 code yang dikirimkan paling bawah untuk kamu identifikasi sesuai knowledge base yang ada, dan dari similarity score yang sudah dihitung, kamu akan memberikan pengetahuan yang relevan dari knowledge base.
 9. knowledge base yang digunakan adalah knowledge_base/duplikasi_kode.txt, knowledge_base/refactoring.txt, knowledge_base/refactoring_tips.txt, knowledge_base/clean_code_princinple.txt, dan pilih salah satu knowledge base yang paling relevan dengan kode yang diberikan.
 10. berikan juga contoh kode yang relevan jika ada, dari knowledge base yang telah disediakan.
+11. outputnya saran kode dan penjelasan singkat tentang kode tersebut. karena orang pasti malas membaca rangkuman panjang, jadi buatlah ringkasan yang singkat,padat dan jelas.
