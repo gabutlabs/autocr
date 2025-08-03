@@ -1,4 +1,4 @@
-from compare import compare_code_files
+from compare import compare_code_files,get_ast_similarity
 import os
 from agent import run_agent
 if __name__ == "__main__":
@@ -12,7 +12,7 @@ if __name__ == "__main__":
         ("/test_cases/original.py", "/test_cases/structure_changed.py"),
     ]
 
-    with open('results.txt', 'a') as f:
+    with open('result_md.md', 'a') as f:
         f.write('Comparing code snippets...\n')
         for file1, file2 in test_cases:
             # Remove leading slash and build correct paths
@@ -28,8 +28,13 @@ if __name__ == "__main__":
             if not os.path.exists(code2):
                 f.write(f"Error: {code2} not found\n")
                 continue
-                
-            score,source1,source2 = compare_code_files(code1, code2)
+            
+            # Uncomment the next line to use SSIM comparison
+            # score,source1,source2 = compare_code_files(code1, code2)
+            # Use AST similarity comparison
+            score = get_ast_similarity(code1, code2)
+            source1 = open(code1, 'r', encoding='utf-8').read()
+            source2 = open(code2, 'r', encoding='utf-8').read()
             if score is None:
                 f.write(f"Error comparing {file1} and {file2}\n")
                 continue

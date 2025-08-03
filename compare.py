@@ -1,7 +1,8 @@
 import numpy as np
 from skimage.metrics import structural_similarity as ssim
 from PIL import Image, ImageDraw, ImageFont
-
+import ast
+import difflib
 def text_to_matrix(text, width=128, height=128):
     # Normalisasi teks
     lines = text.strip().split('\n')
@@ -35,3 +36,16 @@ def compare_code_files(file1_path, file2_path):
     # Hitung SSIM
     score, _ = ssim(matrix1, matrix2, full=True)
     return score,text1,text2
+
+
+def get_ast_similarity(code1, code2):
+    try:
+        with open(code1, 'r', encoding='utf-8') as f1, open(code2, 'r', encoding='utf-8') as f2:
+            text1 = f1.read()
+            text2 = f2.read()
+        tree1 = ast.dump(ast.parse(text1))
+        tree2 = ast.dump(ast.parse(text2))
+        return difflib.SequenceMatcher(None, tree1, tree2).ratio()
+    except Exception as e:
+        print(f"AST parsing error: {e}")
+        return 0.0
